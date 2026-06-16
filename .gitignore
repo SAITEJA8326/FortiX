@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# Databases
+*.db
+*.sqlite3
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+
+# Generated data
+data/*
+!data/.gitkeep
+
+backend/data/*
+!backend/data/.gitkeep
+
+# Keep library source if required
+lib/**/__pycache__/
+
+# Node modules (if frontend later uses npm)
+node_modules/
