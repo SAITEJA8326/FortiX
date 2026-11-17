@@ -24,7 +24,7 @@
 ## Architecture
 
 <p align="center">
-  <img src="docs/diagram (1).png" alt="FortiX system architecture" width="100%"/>
+  <img src="docs/arch.png" alt="FortiX system architecture" width="100%"/>
 </p>
 
 The architecture brings together the GNN training pipeline, graph analytics, analyst dashboard, documented investigation capabilities, and the transaction-facing API.
