@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">FortiX Fraud Detection Platform Architecture</title>
+<desc id="desc">Architecture diagram showing GNN modeling, analyst dashboard, graph analysis, documented capabilities, UPI client, and the fraud API with authentication, transaction storage, and demo scoring.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050814"/><stop offset=".55" stop-color="#090d1b"/><stop offset="1" stop-color="#10102a"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101a2d" stop-opacity=".96"/><stop offset="1" stop-color="#080e1d" stop-opacity=".98"/></linearGradient>
+  <filter id="glowCyan" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="glowViolet" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#a7b8d8"/></marker>
+  <style>
+    .h{font:700 21px Inter,Segoe UI,Arial,sans-serif;fill:#f4f7ff}
+    .sub{font:500 13px Inter,Segoe UI,Arial,sans-serif;fill:#aebbd2}
+    .brand{font:800 38px Inter,Segoe UI,Arial,sans-serif;fill:#f8fbff;letter-spacing:-1px}
+    .brandx{fill:#8b5cf6}
+    .small{font:600 12px Inter,Segoe UI,Arial,sans-serif;fill:#c9d5e9}
+    .boxTitle{font:700 15px Inter,Segoe UI,Arial,sans-serif;fill:#eef5ff}
+    .boxSub{font:500 12px Inter,Segoe UI,Arial,sans-serif;fill:#b6c5dc}
+    .label{font:600 12px Inter,Segoe UI,Arial,sans-serif;fill:#becbe0}
+    .panel{fill:url(#panel);stroke-width:2;rx:18}
+    .node{fill:#0d1a2e;stroke-width:1.7;rx:12}
+    .flow{fill:none;stroke:#91a7c9;stroke-width:1.8;marker-end:url(#arr);opacity:.95}
+    .dashed{stroke-dasharray:7 7}
+  </style>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1490" cy="70" r="290" fill="#31106c" opacity=".13"/>
+<circle cx="65" cy="835" r="280" fill="#0b5380" opacity=".10"/>
+<path d="M0 780 Q400 860 760 840 T1600 790" stroke="#27305a" stroke-width="2" fill="none" opacity=".5"/>
+
+<!-- Header -->
+<g transform="translate(48 35)">
+  <path d="M27 0 L52 14 L52 43 L27 59 L2 43 L2 14 Z" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+  <path d="M27 12 L41 20 L41 37 L27 46 L13 37 L13 20 Z" fill="none" stroke="#a78bfa" stroke-width="2"/>
+  <path d="M20 23 L27 18 L34 23 L31 33 L24 33 Z" fill="none" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="70" y="42" class="brand">Forti<tspan class="brandx">X</tspan></text>
+  <path d="M220 6 V51" stroke="#52617d" stroke-width="2"/>
+  <text x="244" y="26" class="h" font-size="22">Fraud Detection Platform</text>
+  <text x="244" y="49" class="sub">GNN + Graph Analytics + Transaction Intelligence</text>
+  <rect x="0" y="75" width="345" height="36" rx="18" fill="#0d1628" stroke="#526482"/>
+  <circle cx="20" cy="93" r="10" fill="#eef4ff"/><path d="M14 93h12M20 87v12" stroke="#111827" stroke-width="2"/>
+  <text x="40" y="98" class="sub" font-size="14">github.com/SAITEJA8326/FortiX</text>
+</g>
+
+<!-- GNN model -->
+<rect x="670" y="25" width="270" height="165" class="panel" stroke="#00e6a1" filter="url(#glowCyan)"/>
+<text x="805" y="53" text-anchor="middle" class="h">GNN Modeling</text>
+<rect x="695" y="67" width="220" height="46" class="node" stroke="#00e6a1"/>
+<path d="M715 99 L730 75 L745 99 M730 75 V105" stroke="#f59e0b" stroke-width="3" fill="none"/>
+<text x="824" y="86" text-anchor="middle" class="boxTitle">Model Training</text><text x="824" y="103" text-anchor="middle" class="boxSub">train.py</text>
+<path d="M805 114 V132" class="flow"/>
+<rect x="695" y="138" width="220" height="34" class="node" stroke="#00e6a1"/>
+<text x="805" y="160" text-anchor="middle" class="boxTitle">Node and Edge GNNs</text>
+
+<!-- Analyst & UPI actors -->
+<circle cx="1005" cy="135" r="32" fill="#101b3c" stroke="#8b8cff" stroke-width="2"/>
+<circle cx="1005" cy="123" r="8" fill="none" stroke="#a5b4fc" stroke-width="2.4"/>
+<path d="M990 150 Q1005 132 1020 150" stroke="#a5b4fc" stroke-width="2.4" fill="none"/>
+<text x="1005" y="177" text-anchor="middle" class="small">Analyst</text>
+<circle cx="1305" cy="480" r="49" fill="#08223a" stroke="#38bdf8" stroke-width="2.5" filter="url(#glowCyan)"/>
+<text x="1305" y="477" text-anchor="middle" class="h" font-size="16">UPI</text>
+<text x="1305" y="498" text-anchor="middle" class="small">Client</text>
+
+<!-- Dashboard -->
+<rect x="35" y="245" width="565" height="150" class="panel" stroke="#33d9ff" filter="url(#glowCyan)"/>
+<text x="317" y="274" text-anchor="middle" class="h">▣  Analyst Dashboard</text>
+<g>
+ <rect x="60" y="295" width="118" height="73" class="node" stroke="#ff4f91"/>
+ <text x="119" y="325" text-anchor="middle" class="boxTitle">Dashboard</text><text x="119" y="345" text-anchor="middle" class="boxSub">Utilities</text><text x="119" y="360" text-anchor="middle" class="boxSub">utils.py</text>
+ <rect x="190" y="295" width="118" height="73" class="node" stroke="#ff4f91"/>
+ <text x="249" y="325" text-anchor="middle" class="boxTitle">Dashboard</text><text x="249" y="345" text-anchor="middle" class="boxSub">Components</text><text x="249" y="360" text-anchor="middle" class="boxSub">components.py</text>
+ <rect x="320" y="295" width="118" height="73" class="node" stroke="#ff4f91"/>
+ <text x="379" y="325" text-anchor="middle" class="boxTitle">Graph</text><text x="379" y="345" text-anchor="middle" class="boxSub">Interactions</text><text x="379" y="360" text-anchor="middle" class="boxSub">utils.js / graph UI</text>
+ <rect x="450" y="295" width="125" height="73" class="node" stroke="#ff4f91"/>
+ <text x="512" y="325" text-anchor="middle" class="boxTitle">Dashboard App</text><text x="512" y="345" text-anchor="middle" class="boxSub">Streamlit</text><text x="512" y="360" text-anchor="middle" class="boxSub">frontend/app.py</text>
+</g>
+
+<!-- Graph Analysis -->
+<rect x="625" y="245" width="930" height="150" class="panel" stroke="#ffb000" filter="url(#glowCyan)"/>
+<text x="1090" y="274" text-anchor="middle" class="h">◎  Graph Analysis</text>
+<g>
+ <rect x="650" y="295" width="135" height="73" class="node" stroke="#ffb000"/><text x="717" y="326" text-anchor="middle" class="boxTitle">Data Inspection</text><text x="717" y="348" text-anchor="middle" class="boxSub">data_inspection.py</text>
+ <rect x="798" y="295" width="135" height="73" class="node" stroke="#ffb000"/><text x="865" y="326" text-anchor="middle" class="boxTitle">Synthetic</text><text x="865" y="348" text-anchor="middle" class="boxSub">Transactions</text>
+ <rect x="946" y="295" width="135" height="73" class="node" stroke="#ffb000"/><text x="1013" y="326" text-anchor="middle" class="boxTitle">User-Centric</text><text x="1013" y="348" text-anchor="middle" class="boxSub">visualize_graph.py</text>
+ <rect x="1094" y="295" width="135" height="73" class="node" stroke="#ffb000"/><text x="1161" y="326" text-anchor="middle" class="boxTitle">Data Loading</text><text x="1161" y="348" text-anchor="middle" class="boxSub">data_loader.py</text>
+ <rect x="1242" y="295" width="135" height="73" class="node" stroke="#ffb000"/><text x="1309" y="326" text-anchor="middle" class="boxTitle">Preprocessing</text><text x="1309" y="348" text-anchor="middle" class="boxSub">preprocessing.py</text>
+ <rect x="1390" y="295" width="140" height="73" class="node" stroke="#ffb000"/><text x="1460" y="326" text-anchor="middle" class="boxTitle">Feature</text><text x="1460" y="348" text-anchor="middle" class="boxSub">Engineering</text>
+</g>
+
+<!-- Documented capabilities -->
+<rect x="520" y="440" width="590" height="110" class="panel" stroke="#8b8cff" filter="url(#glowViolet)"/>
+<text x="815" y="470" text-anchor="middle" class="h">▤  Documented Capabilities</text>
+<g>
+ <rect x="550" y="488" width="170" height="42" class="node" stroke="#38bdf8"/><text x="635" y="514" text-anchor="middle" class="boxTitle">UPI App Integration</text>
+ <rect x="730" y="488" width="170" height="42" class="node" stroke="#38bdf8"/><text x="815" y="514" text-anchor="middle" class="boxTitle">Fraud Tracing</text>
+ <rect x="910" y="488" width="170" height="42" class="node" stroke="#38bdf8"/><text x="995" y="514" text-anchor="middle" class="boxTitle">Guardian Mode</text>
+</g>
+
+<!-- API panel -->
+<rect x="500" y="620" width="750" height="245" class="panel" stroke="#7c91ff" filter="url(#glowViolet)"/>
+<text x="875" y="650" text-anchor="middle" class="h">⚙  Fraud API  ·  backend/server.py</text>
+<rect x="770" y="670" width="210" height="48" class="node" stroke="#38bdf8" fill="#0b2340"/>
+<text x="875" y="691" text-anchor="middle" class="boxTitle">HTTP API</text><text x="875" y="707" text-anchor="middle" class="boxSub">Python HTTPServer · Port 8000</text>
+<rect x="550" y="755" width="220" height="75" class="node" stroke="#38bdf8"/>
+<path d="M572 775 L588 775 L596 783 L596 810 L572 810 Z" stroke="#38bdf8" fill="none" stroke-width="2"/>
+<text x="665" y="785" text-anchor="middle" class="boxTitle">JWT Authentication</text><text x="665" y="806" text-anchor="middle" class="boxSub">backend/auth.py</text>
+<rect x="790" y="755" width="220" height="75" class="node" stroke="#38bdf8"/>
+<ellipse cx="817" cy="776" rx="12" ry="5" fill="none" stroke="#38bdf8" stroke-width="2"/><path d="M805 776 V807 Q817 818 829 807 V776" fill="none" stroke="#38bdf8" stroke-width="2"/>
+<text x="905" y="785" text-anchor="middle" class="boxTitle">Transaction Store</text><text x="905" y="806" text-anchor="middle" class="boxSub">backend/storage.py · in-memory</text>
+<rect x="1030" y="755" width="190" height="75" class="node" stroke="#38bdf8"/>
+<path d="M1052 800 V783 M1062 800 V771 M1072 800 V777" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+<text x="1143" y="785" text-anchor="middle" class="boxTitle">Demo Fraud Scoring</text><text x="1143" y="806" text-anchor="middle" class="boxSub">backend/fraud.py</text>
+
+<!-- Tech stack card -->
+<rect x="45" y="520" width="335" height="330" fill="#080e1c" stroke="#7887a8" stroke-width="1.6" stroke-dasharray="7 6" rx="16"/>
+<text x="72" y="557" class="h">Technology Stack</text>
+<g class="boxTitle">
+ <text x="78" y="602">🐍  Python</text><text x="78" y="638">🔥  PyTorch + PyTorch Geometric</text>
+ <text x="78" y="674">◉  NetworkX</text><text x="78" y="710">▦  Pandas / NumPy / scikit-learn</text>
+ <text x="78" y="746">▣  Streamlit + Plotly</text><text x="78" y="782">🔐  PyJWT</text>
+ <text x="78" y="818">↔  UPI transaction data</text>
+</g>
+
+<!-- Flow connectors -->
+<path d="M940 110 H972 V135" class="flow"/>
+<path d="M1005 168 V218 H512 V294" class="flow dashed"/>
+<text x="700" y="212" class="label">uses dashboard</text>
+<path d="M1005 168 V225 H1090 V294" class="flow"/>
+<text x="1035" y="214" class="label">reviews transaction graph</text>
+<path d="M1090 395 V414 H995 V439" class="flow dashed"/>
+<text x="1100" y="414" class="label">uses protection mode</text>
+<path d="M512 395 V414 H635 V487" class="flow dashed"/>
+<text x="405" y="424" class="label">supports investigation</text>
+<path d="M635 530 V585 H875 V669" class="flow dashed"/>
+<text x="665" y="580" class="label">integrates securely</text>
+<path d="M1305 529 V590 H875 V669" class="flow"/>
+<text x="1120" y="582" class="label">submits transactions</text>
+<path d="M805 718 V738 H665 V754" class="flow"/>
+<text x="580" y="741" class="label">authenticates requests</text>
+<path d="M875 718 V754" class="flow"/>
+<text x="889" y="742" class="label">stores / retrieves</text>
+<path d="M950 718 H1125 V754" class="flow"/>
+<text x="1025" y="742" class="label">scores & explains</text>
+
+<text x="1550" y="885" text-anchor="end" class="sub">FortiX · System Architecture</text>
+</svg>
